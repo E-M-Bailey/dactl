@@ -2,10 +2,10 @@ The rest of this README describes KACTL, which this repo is based on:
 
 # KACTL
 
-This repo hosts KACTL, [KTH](https://en.wikipedia.org/wiki/KTH_Royal_Institute_of_Technology)'s ICPC team reference document.
+This repo hosts DACTL, [UTD](https://en.wikipedia.org/wiki/University_of_Texas_at_Dallas)'s ICPC team reference document. It is based on KACTL, [KTH](https://en.wikipedia.org/wiki/KTH_Royal_Institute_of_Technology)'s ICPC team reference document.
 It consists of 25 pages of copy-pasteable C++ code, for use in ICPC-style programming competitions.
 
-See [kactl.pdf](./kactl.pdf) for the final, browsable version, and [content/](./content/) for raw source code.
+See [dactl.pdf](./dactl.pdf) for the final, browsable version, and [content/](./content/) for raw source code.
 
 ## Aspirations
 
@@ -17,12 +17,12 @@ If you feel that something is missing, could be cleaned up, or notice a bug, ple
 
 ## Customizing KACTL
 
-While KACTL is usable as is, it's also easy to modify if you want to create a personalized copy.
+While KACTL is usable as is, it's also easy to modify if you want to create a personalized copy (which we did).
 In particular, you may want to change the cover page, or make your own choice of algorithms to include --
 due to space concerns, not all algorithms in the repo are included in the pdf.
 You may also want to enable colored syntax highlighting.
 
-`content/kactl.tex` is the main file of KACTL, and can be edited to change team name, logo, syntax highlighting, etc.
+`content/dactl.tex` is the main file of DACTL, and can be edited to change team name, logo, syntax highlighting, etc.
 It imports `chapter.tex` files from each of the `content/` subdirectories, which define the contents of each chapter.
 These include source code, text and math in the form of LaTeX.
 To add/remove code from a chapter, add/remove a corresponding `\kactlimport` line from the `chapter.tex` file.
@@ -30,7 +30,7 @@ For nicer alignment you might want to insert `\hardcolumnbreak`, `\columnbreak` 
 though this is usually only done before important contests, and not on the main branch.
 The algorithms that are not included in the pdf are left commented out in `chapter.tex`.
 
-To build KACTL, type `make kactl` (or `make fast`) on a \*nix machine -- this will update `kactl.pdf`.
+To build DACTL, type `make dactl` (or `make fast`) on a \*nix machine -- this will update `dactl.pdf`.
 (Windows might work as well, but is not tested.) `doc/README` has a few more notes about this.
 
 Tips:
@@ -45,7 +45,7 @@ hashing ignores whitespace and comments.
 
 ## Coding style
 
-KACTL uses a relatively terse coding style, with a handful of macros/typedefs defined in the
+DACTL, like KACTL, uses a relatively terse coding style, with a handful of macros/typedefs defined in the
 [template](./content/contest/template.cpp) that help shorten the code.
 Line width is 63 chars, with tabs for indentation (tab = 2 spaces in the pdf).
 
@@ -53,8 +53,8 @@ Each algorithm contains a header with the author of the code, the date it
 was added, a description of the algorithm, its testing status, and preferably also
 source, license and time complexity.
 
-kactl.pdf is to be kept to 25 pages + cover page.
-Occasionally the generated kactl.pdf is committed to the repo for convenience, but not too often because it makes git operations slower.
+dactl.pdf is to be kept to 25 pages + cover page.
+Occasionally the generated dactl.pdf is committed to the repo for convenience, but not too often because it makes git operations slower.
 
 ## Testing
 
